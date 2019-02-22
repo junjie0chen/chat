@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./robot.css">
 </head>
 <body>
     <div class="wrapper">
@@ -13,9 +14,10 @@
 
         </div>
         <div class="footer">
-            <input type="text" class="input">
-            <button class="btn"></button>
+            <input type="text" class="input" onkeyup="sendData(event)">
+            <button class="btn" onclick="sendData(event)">发送</button>
         </div>
     </div>
+    <script src="./robot.js"></script>
 </body>
 </html>
