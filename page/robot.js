@@ -17,8 +17,12 @@ function sendData(event) {
     ajax.send();
     ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 200) {
-            console.log(ajax.responseText)
+            if (ajax.responseText) {
+                var robotVal = JSON.parse(ajax.responseText).text;
+                const p = document.createElement("p");
+                p.innerText = "机器人：" + robotVal;
+            }
         }
     }
-
+    document.getElementsByClassName("content")[0].appendChild(p);
 }
