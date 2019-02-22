@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/junjie0chen/chat/issues"
   },
-  "homepage": "https://github.com/junjie0chen/chat#readme"
+  "homepage": "https://github.com/junjie0chen/chat#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
