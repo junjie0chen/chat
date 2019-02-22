@@ -44,7 +44,11 @@ http.createServer(function (request, response) {
                 if (!error && reqs.statusCode == 200) {
                     const obj = JSON.parse(body)
                     if (obj && obj.results && obj.results.length > 0 && obj.results[0].values) {
-                        const header = {};
+                        const header = {
+                            "Access-Control-Allow-Origin": "*",
+                            "Access-Control-Methods": "GET",
+                            "Access-Control-Header": "x-requested, content-type"
+                        };
                         response.writeHead(200, header);
                         response.write(JSON.stringify(obj.results[0].values))
                         response.end();
